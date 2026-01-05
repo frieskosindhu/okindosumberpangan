@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKINDO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigasi Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logocompany.png" class="logo-custom animate__animated animate__fadeInDown">
+                <span class="animate__animated animate__fadeInDown"> OKINDO SUMBER PANGAN </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto p-2 me-2">
+                    <li class="nav-item animate__animated animate__fadeInDown">
+                        <a class="nav-link" aria-current="page" href="#" data-i18n="navbar_home">Home</a>
+                    </li>
+
+                    <li class="nav-item animate__animated animate__fadeInDown">
+                        <a class="nav-link" href="#about" data-i18n="navbar_about">About Us</a>
+                    </li>
+
+                    <li class="nav-item animate__animated animate__fadeInDown">
+                        <a class="nav-link" href="#product" data-i18n="navbar_product">Product</a>
+                    </li>
+
+                    <li class="nav-item animate__animated animate__fadeInDown">
+                        <a class="nav-link" href="#contact" data-i18n="navbar_contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item dropdown animate__animated animate__fadeInDown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> Language </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="id">Indonesia</a></li>
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="zh">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide container my-5 carousel-height-custom"
+        data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="coconutsugar.jpeg" class="d-block w-100" alt="Premium Coconut Sugar Product">
+            </div>
+            <div class="carousel-item">
+                <img src="coconutsugar2.jpg" class="d-block w-100" alt="Coconut Sugar Production Process">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Carousel End -->
+
+    <!-- Section About Us -->
+
+    <section id="about" class="section-perusahaan py-5">
+        <!-- Background decorative elements -->
+        <div class="artistic-bg-section">
+            <div class="bg-leaf leaf-a1"></div>
+            <div class="bg-leaf leaf-a2"></div>
+            <div class="bg-crystal crystal-a1"></div>
+            <div class="bg-crystal crystal-a2"></div>
+        </div>
+
+        <div class="container-sm">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="image-grid">
+
+                        <div class="img-large-wrapper">
+                            <img src="petani.jpeg" alt="Local farmers harvesting coconut" class="">
+                        </div>
+
+                        <div class="">
+                            <img src="coconutsugar.jpeg" alt="Premium coconut sugar products" class="">
+                        </div>
+
+                        <div class="">
+                            <img src="produk-coconut-sugar.jpeg" alt="Kahiyang coconut sugar packaging" class="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 ps-md-5">
+                    <h6 class="text-uppercase text-brown fw-bold" data-i18n="about_subtitle">
+                        About Us
+                    </h6>
+
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="company_name">
+                        CV. OKINDO SUMBER PANGAN
+                    </h2>
+                    <p class="text-muted" data-i18n="about_description">
+                        Berbasis di Surabaya, CV. Okindo Sumber Pangan hadir sebagai pilar pendukung bagi merek
+                        kebanggaan kami yaitu: Kahiyang.
+                        Melalui Kahiyang, kami mengkurasi hasil bumi terbaik Indonesia, mulai dari gula kelapa alami
+                        hingga rempah-rempah autentik untuk menghadirkannya ke kancah Internasional.
+                        Nama Kahiyang bukan sekadar label, melainkan representasi dari komitmen kami terhadap kemurnian
+                        dan kualitas yang setinggi "Khayangan"
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-whyus">
+        <!-- Background decorative elements -->
+        <div class="artistic-bg-section">
+            <div class="bg-leaf leaf-w1"></div>
+            <div class="bg-diamond diamond-w1"></div>
+            <div class="bg-diamond diamond-w2"></div>
+        </div>
+
+        <div class="container-sm">
+            <div class="row justify-content-center">
+
+                <!-- Visi Card -->
+                <div class="col-12 col-md-5 mb-4 mb-md-0">
+                    <div class="vision-mission-card vision-card">
+                        <div class="icon-wrapper vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h6 class="why-us text-uppercase fw-bold" data-i18n="vision_title"> Visi </h6>
+                        <p data-i18n="vision_description"> Menjadikan Kahiyang sebagai merek pangan alami dan
+                            tradisional Indonesia yang paling dicintai di pasar global, dikenal karena kualitasnya yang
+                            premium dan komitmennya pada kesejahteraan petani lokal </p>
+                    </div>
+                </div>
+
+                <!-- Misi Card -->
+                <div class="col-12 col-md-5 ms-md-4">
+                    <div class="vision-mission-card mission-card">
+                        <div class="icon-wrapper mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h6 class="why-us text-uppercase fw-bold" data-i18n="mission_title"> Misi </h6>
+                        <ul class="mission-list">
+                            <li data-i18n="mission_1">Menjaga standar kualitas tertinggi dalam setiap produk yang
+                                menyandang label Kahiyang</li>
+                            <li data-i18n="mission_2">Menghubungkan kekayaan alam nusantara dengan pasar global melalui
+                                rantai pasokan yang adil dan berkelanjutan</li>
+                            <li data-i18n="mission_3">Memastikan setiap tetes nira dan butir rempah dalam produk
+                                Kahiyang memberikan manfaat kesehatan bagi konsumen dan dampak positif bagi komunitas
+                                petani</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Filosofi -->
+    <section class="section-filosofi">
+        <!-- Background decorative elements -->
+        <div class="artistic-bg-section">
+            <div class="bg-leaf leaf-f1"></div>
+            <div class="bg-leaf leaf-f2"></div>
+            <div class="bg-sunburst sunburst-f1"></div>
+            <div class="bg-orb orb-f1"></div>
+        </div>
+
+        <div class="container-sm py-5">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <h6 class="text-uppercase text-brown fw-bold" data-i18n="filosofi_subtitle"> Filosofi Kahiyang </h6>
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="filosofi_title"> Rasa dari Khayangan </h2>
+                    <p class="text-muted" data-i18n="filosofi_1">
+                        Nama Kahiyang bukan sekadar rangkaian huruf, ia adalah doa yang kami panjatkan.
+                        Terinspirasi dari kata Khayangan, yang menggambarkan tempat yang suci, indah, dan penuh berkah,
+                        kami ingin setiap produk yang menyentuh lidah pelanggan membawa kenangan dan ketenangan.
+                    </p>
+                    <p class="text-muted mt-3" data-i18n="filosofi_2">Bagi kami Kahiyang adalah simbol penghormatan
+                        kepada:</p>
+                    <ul class="text-muted mt-2">
+                        <li data-i18n="filosofi_3"><strong>Alam yang subur</strong><br>Mengambil hanya yang terbaik dari
+                            bumi tanpa merusaknya</li>
+                        <li class="mt-2" data-i18n="filosofi_4"><strong>Tangan yang tulus</strong><br>Menghargai
+                            dedikasi para petani lokal yang bekerja dengan hati</li>
+                        <li class="mt-2" data-i18n="filosofi_5"><strong>Warisan yang abadi</strong><br>Menjaga rasa
+                            autentik Indonesia agar tetap hidup di meja makan dunia</li>
+                    </ul>
+                    <p class="text-muted mt-3" data-i18n="filosofi_6">
+                        Kami percaya bahwa makanan yang dibuat dengan tulus dan rasa syukur akan membawa kebaikan yang
+                        melampaui rasa kenyang.
+                        Kahiyang adalah janji kami untuk menghadirkan secercah "Keindahan Surga" melalui kekayaan pangan
+                        Indonesia ke seluruh penjuru dunia.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 ps-md-5">
+                    <div class="img-brand d-flex justify-content-center">
+                        <img src="kahiyang.png" class="brand-kahiyang">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section About Us END -->
+
+    <!-- Section Produk -->
+
+    <section class="container-product" id="product">
+        <!-- Background decorative elements -->
+        <div class="artistic-bg">
+            <div class="coconut-leaf leaf-1"></div>
+            <div class="coconut-leaf leaf-2"></div>
+            <div class="sugar-crystal crystal-1"></div>
+            <div class="sugar-crystal crystal-2"></div>
+            <div class="sugar-crystal crystal-3"></div>
+            <div class="caramel-drip drip-1"></div>
+            <div class="caramel-drip drip-2"></div>
+        </div>
+
+        <div class="product-area">
+            <div class="row align-items-start">
+                <div class="col-12 col-md-6">
+                    <div class="product-image bg_cover" style="background-image: url(produk-coconut-sugar.jpeg);">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="product-content-wrapper">
+                        <div class="product-content">
+                            <h4 class="title-produk" data-i18n="product_title">
+                                Kahiyang Premium Coconut Sugar
+                            </h4>
+                            <p class="description-product" data-i18n="product_description">
+                                Kristal emas dari kemurnian alam Indonesia. Dihasilkan dari nira kelapa pilihan yang
+                                dipanen secara tradisional, menghasilkan pemanis alami dengan rasa manis lembut dan
+                                aroma karamel autentik.
+                            </p>
+                            <ul class="product-features">
+                                <li data-i18n="product_feature_1">100% alami tanpa bahan kimia</li>
+                                <li data-i18n="product_feature_2">Indeks glikemik rendah</li>
+                                <li data-i18n="product_feature_3">Dipetik langsung dari petani lokal</li>
+                            </ul>
+                            <p class="hs-code"><i class="fas fa-barcode me-2"></i>HS Code: 1702.90.99</p>
+                        </div>
+                        <div class="product-button-wrapper">
+                            <button type="button" class="main-btn" data-bs-toggle="modal" data-bs-target="#productModal"
+                                data-i18n="explore_button">
+                                Explore More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Product Details -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">
+                        <i class="fas fa-star me-2"></i><span data-i18n="modal_title">Kenapa Memilih Kahiyang?</span>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="feature-list">
+                                <li>
+                                    <div class="feature-icon">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <strong data-i18n="feature_1_title">100% alami</strong>
+                                        <p data-i18n="feature_1_desc">Tanpa tambahan bahan kimia, pengawet atau pemanis
+                                            buatan.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <strong data-i18n="feature_2_title">Indeks Glikemik rendah</strong>
+                                        <p data-i18n="feature_2_desc">Pilihan pemanis yang lebih sehat bagi mereka yang
+                                            peduli dengan kesehatan.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <strong data-i18n="feature_3_title">Kaya Nutrisi</strong>
+                                        <p data-i18n="feature_3_desc">Mengandung mineral penting seperti Kalium,
+                                            Magnesium dan Zat Besi yang tetap terjaga melalui proses pengolahan suhu
+                                            rendah.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">
+                                        <i class="fas fa-coffee"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <strong data-i18n="feature_4_title">Aroma Karamel yang mewah</strong>
+                                        <p data-i18n="feature_4_desc">Memberikan dimensi rasa yang lebih kaya pada kopi,
+                                            teh, kue maupun masakan anda.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn" data-bs-dismiss="modal"
+                        data-i18n="close_button">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section Produk End -->
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container-fluid footer-all p-0">
+            <div class="row align-items-start g-0">
+                <div class="col-12 col-md-3">
+                    <h4 class="info-contact fw-bold text-brown" data-i18n="contact_info"> Contact Info </h4>
+                    <ul class="list-unstyled contact-email">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <p class="email-okindo">okindosumberpangan@gmail.com</p>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <p class="no-telp">+628953599696007</p>
+                        </li>
+
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt mb-2 me-2"></i>
+                            <p class="alamat-perusahaan">Pasar Krembangan 16-18, Surabaya, Jawa Timur, Indonesia, 60175
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h4 class="info-social-media fw-bold text-brown" data-i18n="social_media"> Social Media</h4>
+                    <ul class="list-unstyled contact-socmed">
+
+                        <li class="d-flex align-items-center mb-3">
+                            <a href="https://www.instagram.com/okindosumberutama/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <p class="instagram"> Instagram </p>
+                        </li>
+
+                        <li class="d-flex mb-3 align-items-center">
+                            <a href="https://www.facebook.com/okindo.sumber.utama" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <p class="facebook"> Facebook </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 ms-auto">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.035286960312!2d112.73250999999999!3d-7.236814899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f924ae56d78d%3A0xdb6d0f6f88247761!2sJl.%20Ps.%20Krembangan%20No.16%2C%20RT.011%2FRW.08%2C%20Krembangan%20Sel.%2C%20Kec.%20Krembangan%2C%20Surabaya%2C%20Jawa%20Timur%2060175!5e0!3m2!1sid!2sid!4v1767075466102!5m2!1sid!2sid"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script>
+        const translation = {
+            // Navbar
+            "navbar_home": {
+                "en": "Home",
+                "id": "Beranda",
+                "zh": "首页"
+            },
+            "navbar_about": {
+                "en": "About Us",
+                "id": "Tentang Kami",
+                "zh": "关于我们"
+            },
+            "navbar_product": {
+                "en": "Product",
+                "id": "Produk",
+                "zh": "产品"
+            },
+            "navbar_contact": {
+                "en": "Contact",
+                "id": "Kontak",
+                "zh": "联系我们"
+            },
+
+            // About Section
+            "about_subtitle": {
+                "en": "About Us",
+                "id": "Tentang Kami",
+                "zh": "关于我们"
+            },
+            "company_name": {
+                "en": "CV. OKINDO SUMBER PANGAN",
+                "id": "CV. OKINDO SUMBER PANGAN",
+                "zh": "CV. OKINDO SUMBER PANGAN",
+            },
+            "about_description": {
+                "en": "Based in Surabaya, CV. Okindo Sumber Pangan stands as a supporting pillar for our flagship brand: Kahiyang. Through Kahiyang, we curate the finest Indonesian earth products, from natural coconut sugar to authentic spices, to present them on the international stage. The name Kahiyang is not merely a label, but a representation of our commitment to purity and quality as high as the heavens.",
+                "id": "Berbasis di Surabaya, CV. Okindo Sumber Pangan hadir sebagai pilar pendukung bagi merek kebanggaan kami yaitu: Kahiyang. Melalui Kahiyang, kami mengkurasi hasil bumi terbaik Indonesia, mulai dari gula kelapa alami hingga rempah-rempah autentik untuk menghadirkannya ke kancah Internasional. Nama Kahiyang bukan sekadar label, melainkan representasi dari komitmen kami terhadap kemurnian dan kualitas yang setinggi Khayangan.",
+                "zh": "总部位于泗水的OKINDO粮食资源公司是我们的旗舰品牌Kahiyang的坚实支柱。通过Kahiyang，我们精选印度尼西亚最好的地球产物，从天然椰子糖到正宗香料，将它们推向国际舞台。Kahiyang这个名字不仅仅是一个标签，而是我们对纯净和品质最高标准的承诺代表。"
+            },
+
+            // Vision & Mission
+            "vision_title": {
+                "en": "Vision",
+                "id": "Visi",
+                "zh": "愿景"
+            },
+            "vision_description": {
+                "en": "To make Kahiyang the most beloved natural and traditional Indonesian food brand in the global market, known for its premium quality and commitment to the welfare of local farmers",
+                "id": "Menjadikan Kahiyang sebagai merek pangan alami dan tradisional Indonesia yang paling dicintai di pasar global, dikenal karena kualitasnya yang premium dan komitmennya pada kesejahteraan petani lokal",
+                "zh": "让Kahiyang成为全球市场上最受欢迎的自然与传统印度尼西亚食品品牌，以其卓越品质和对当地农民福祉的承诺而闻名"
+            },
+            "mission_title": {
+                "en": "Mission",
+                "id": "Misi",
+                "zh": "使命"
+            },
+            "mission_1": {
+                "en": "Maintain the highest quality standards in every product bearing the Kahiyang label",
+                "id": "Menjaga standar kualitas tertinggi dalam setiap produk yang menyandang label Kahiyang",
+                "zh": "保持每款带有Kahiyang标签的产品的最高质量标准"
+            },
+            "mission_2": {
+                "en": "Connect the richness of Indonesian nature with the global market through a fair and sustainable supply chain",
+                "id": "Menghubungkan kekayaan alam nusantara dengan pasar global melalui rantai pasokan yang adil dan berkelanjutan",
+                "zh": "通过公平可持续的供应链，将印度尼西亚自然丰富资源与全球市场连接"
+            },
+            "mission_3": {
+                "en": "Ensure every drop of nectar and grain of spice in Kahiyang products provides health benefits to consumers and positive impact to farmer communities",
+                "id": "Memastikan setiap tetes nira dan butir rempah dalam produk Kahiyang memberikan manfaat kesehatan bagi konsumen dan dampak positif bagi komunitas petani",
+                "zh": "确保Kahiyang产品中的每一滴花蜜和香料颗粒都能为消费者带来健康益处，并为农民社区带来积极影响"
+            },
+
+            // Filosofi Section
+            "filosofi_subtitle": {
+                "en": "Kahiyang Philosophy",
+                "id": "Filosofi Kahiyang",
+                "zh": "Kahiyang 哲学"
+            },
+            "filosofi_title": {
+                "en": "Taste of Paradise",
+                "id": "Rasa dari Khayangan",
+                "zh": "天堂之味"
+            },
+            "filosofi_1": {
+                "en": "The name Kahiyang is not just a string of letters, it is a prayer we offer. Inspired by the word Khayangan, which describes a sacred, beautiful, and blessed place, we want every product that touches our customers' lips to bring memories and tranquility.",
+                "id": "Nama Kahiyang bukan sekadar rangkaian huruf, ia adalah doa yang kami panjatkan. Terinspirasi dari kata Khayangan, yang menggambarkan tempat yang suci, indah, dan penuh berkah, kami ingin setiap produk yang menyentuh lidah pelanggan membawa kenangan dan ketenangan.",
+                "zh": "Kahiyang这个名字不仅仅是一串字母，是我们献上的祈祷。受Khyangan一词的启发，它描述了一个神圣、美丽和充满祝福的地方，我们希望每一款触及顾客嘴唇的产品都能带来回忆和宁静。"
+            },
+            "filosofi_2": {
+                "en": "For us, Kahiyang is a symbol of respect for:",
+                "id": "Bagi kami Kahiyang adalah simbol penghormatan kepada:",
+                "zh": "对我们来说，Kahiyang是尊敬的象征："
+            },
+            "filosofi_3": {
+                "en": "<strong>Abundant Nature</strong><br>Taking only the best from the earth without damaging it",
+                "id": "<strong>Alam yang subur</strong><br>Mengambil hanya yang terbaik dari bumi tanpa merusaknya",
+                "zh": "<strong>富饶的大自然</strong><br>只取地球之精华而不破坏它"
+            },
+            "filosofi_4": {
+                "en": "<strong>Sincere Hands</strong><br>Appreciating the dedication of local farmers who work with heart",
+                "id": "<strong>Tangan yang tulus</strong><br>Menghargai dedikasi para petani lokal yang bekerja dengan hati",
+                "zh": "<strong>真诚的双手</strong><br>感激用心工作的当地农民的奉献"
+            },
+            "filosofi_5": {
+                "en": "<strong>Eternal Heritage</strong><br>Preserving authentic Indonesian flavors to remain alive on world tables",
+                "id": "<strong>Warisan yang abadi</strong><br>Menjaga rasa autentik Indonesia agar tetap hidup di meja makan dunia",
+                "zh": "<strong>永恒的遗产</strong><br>保护正宗的印度尼西亚风味，让其在世界餐桌上延续"
+            },
+            "filosofi_6": {
+                "en": "We believe that food made with sincerity and gratitude will bring goodness beyond mere satisfaction. Kahiyang is our promise to bring a glimpse of Paradise Beauty through Indonesia's food richness to the entire world.",
+                "id": "Kami percaya bahwa makanan yang dibuat dengan tulus dan rasa syukur akan membawa kebaikan yang melampaui rasa kenyang. Kahiyang adalah janji kami untuk menghadirkan secercah Keindahan Surga melalui kekayaan pangan Indonesia ke seluruh penjuru dunia.",
+                "zh": "我们相信用真诚和感恩制作的食物将带来超越饱腹感的美好。Kahiyang是我们通过印度尼西亚的粮食财富向全世界展现天堂之美缩影的承诺。"
+            },
+
+            // Product Section
+            "product_title": {
+                "en": "Kahiyang Premium Coconut Sugar",
+                "id": "Kahiyang Premium Coconut Sugar",
+                "zh": "Kahiyang 优质椰子糖"
+            },
+            "product_description": {
+                "en": "Golden crystal born from the purity of Indonesian nature. Made from selected coconut nectar harvested traditionally, producing a natural sweetener with gentle sweetness and authentic caramel aroma.",
+                "id": "Kristal emas dari kemurnian alam Indonesia. Dihasilkan dari nira kelapa pilihan yang dipanen secara tradisional, menghasilkan pemanis alami dengan rasa manis lembut dan aroma karamel autentik.",
+                "zh": "诞生于印度尼西亚自然纯净的金色结晶。精选椰子花蜜传统采集，产出天然甜味剂，口感柔和，伴有正宗焦糖香气。"
+            },
+            "product_feature_1": {
+                "en": "100% natural without chemicals",
+                "id": "100% alami tanpa bahan kimia",
+                "zh": "100% 天然无化学添加"
+            },
+            "product_feature_2": {
+                "en": "Low glycemic index",
+                "id": "Indeks glikemik rendah",
+                "zh": "低血糖指数"
+            },
+            "product_feature_3": {
+                "en": "Directly sourced from local farmers",
+                "id": "Dipetik langsung dari petani lokal",
+                "zh": "直接从当地农民采购"
+            },
+            "explore_button": {
+                "en": "Explore More",
+                "id": "Selengkapnya",
+                "zh": "了解更多"
+            },
+
+            // Modal
+            "modal_title": {
+                "en": "Why Choose Kahiyang?",
+                "id": "Kenapa Memilih Kahiyang?",
+                "zh": "为什么选择Kahiyang？"
+            },
+            "feature_1_title": {
+                "en": "100% Natural",
+                "id": "100% alami",
+                "zh": "100% 天然"
+            },
+            "feature_1_desc": {
+                "en": "No added chemicals, preservatives or artificial sweeteners.",
+                "id": "Tanpa tambahan bahan kimia, pengawet atau pemanis buatan.",
+                "zh": "不含化学添加剂、防腐剂或人工甜味剂。"
+            },
+            "feature_2_title": {
+                "en": "Low Glycemic Index",
+                "id": "Indeks Glikemik rendah",
+                "zh": "低血糖指数"
+            },
+            "feature_2_desc": {
+                "en": "A healthier sweetener choice for those who care about health.",
+                "id": "Pilihan pemanis yang lebih sehat bagi mereka yang peduli dengan kesehatan.",
+                "zh": "为更健康的甜味剂选择。"
+            },
+            "feature_3_title": {
+                "en": "Rich in Nutrients",
+                "id": "Kaya Nutrisi",
+                "zh": "营养丰富"
+            },
+            "feature_3_desc": {
+                "en": "Contains important minerals such as Potassium, Magnesium and Iron that are preserved through low-temperature processing.",
+                "id": "Mengandung mineral penting seperti Kalium, Magnesium dan Zat Besi yang tetap terjaga melalui proses pengolahan suhu rendah.",
+                "zh": "含有重要矿物质如钾、镁和铁，通过低温加工得以保留。"
+            },
+            "feature_4_title": {
+                "en": "Luxurious Caramel Aroma",
+                "id": "Aroma Karamel yang mewah",
+                "zh": "奢华焦糖香气"
+            },
+            "feature_4_desc": {
+                "en": "Adds a richer flavor dimension to your coffee, tea, cakes or dishes.",
+                "id": "Memberikan dimensi rasa yang lebih kaya pada kopi, teh, kue maupun masakan anda.",
+                "zh": "为您的咖啡、茶、蛋糕或菜肴增添更丰富的风味层次。"
+            },
+            "close_button": {
+                "en": "Close",
+                "id": "Tutup",
+                "zh": "关闭"
+            },
+
+            // Footer
+            "contact_info": {
+                "en": "Contact Info",
+                "id": "Info Kontak",
+                "zh": "联系信息"
+            },
+            "social_media": {
+                "en": "Social Media",
+                "id": "Media Sosial",
+                "zh": "社交媒体"
+            }
+        };
+
+        function setLanguage(langcode) {
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+
+                if (translation[key] && translation[key][langcode]) {
+                    element.innerHTML = translation[key][langcode];
+                }
+            });
+
+            localStorage.setItem('userLanguage', langcode);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSelectors = document.querySelectorAll('.lang-select');
+
+            langSelectors.forEach(selector => {
+                selector.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const newLang = selector.getAttribute('data-lang');
+                    setLanguage(newLang);
+                });
+            });
+
+            const storedLang = localStorage.getItem('userLanguage') || 'en';
+            setLanguage(storedLang);
+        });
+
+        // Scroll Animation Script
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateElements = document.querySelectorAll('h2, h4, h6, p, .image-grid, .brand-kahiyang, .product-content, .main-btn, .contact-email, .contact-socmed, .info-contact, .info-social-media, .experience-badge-mobile, .experience-badge-desktop, .footer-all iframe');
+
+            animateElements.forEach((el, index) => {
+                el.classList.add('scroll-animate');
+                el.classList.add('scroll-delay-' + ((index % 5) + 1));
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            carouselItems.forEach((item, index) => {
+                item.classList.add('scroll-animate');
+                item.classList.add('scroll-delay-' + ((index % 3) + 1));
+            });
+
+            carouselItems.forEach(item => {
+                observer.observe(item);
+            });
+
+            const buttons = document.querySelectorAll('.main-btn, .nav-link');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', function () {
+                    this.style.transition = 'all 0.3s ease';
+                });
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Parallax effect for images
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.product-image, .carousel-item img');
+
+            parallaxElements.forEach(el => {
+                const speed = 0.5;
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (isVisible) {
+                    const yPos = -(scrolled * speed * 0.1);
+                    el.style.transform = 'translateY(' + yPos + 'px)';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

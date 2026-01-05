@@ -1,0 +1,2394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Scroll Animations - Base Styles */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation delay classes */
+.scroll-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.scroll-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.scroll-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.scroll-delay-4 {
+    transition-delay: 0.4s;
+}
+
+.scroll-delay-5 {
+    transition-delay: 0.5s;
+}
+
+/* Slide from left animation */
+.scroll-animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate-left.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide from right animation */
+.scroll-animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate-right.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale up animation */
+.scroll-animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate-scale.animate-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Fade in animation */
+.scroll-animate-fade {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animate-fade.animate-in {
+    opacity: 1;
+}
+
+/* Navbar - Coconut Brown Theme */
+.navbar {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #6B4226 100%);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.navbar.scrolled {
+    padding: 5px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-custom {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    object-fit: fill;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.logo-custom:hover {
+    transform: scale(1.1);
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover {
+    opacity: 0.8;
+}
+
+.nav-link {
+    color: white;
+    font-size: 0.9rem;
+    padding: 8px 12px !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.navbar-toggler {
+    border: 2px solid white;
+    padding: 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.dropdown-menu {
+    background: linear-gradient(180deg, #6B4226 0%, #8B4513 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.2), transparent);
+    color: #FFD700;
+}
+
+/* Carousel */
+.carousel-height-custom {
+    max-height: 500px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.3);
+    border: 3px solid rgba(139, 69, 19, 0.2);
+}
+
+.carousel-inner {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    transform: scale(1.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(139, 69, 19, 0.3);
+    border-radius: 50%;
+}
+
+/* Section About Us - Warm Cream Theme */
+.section-perusahaan {
+    background: linear-gradient(180deg, #FFF8F0 0%, #F5E6D3 100%);
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+
+.section-perusahaan .container-sm {
+    padding: 0 15px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 180px;
+    grid-gap: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.img-large-wrapper {
+    grid-row: span 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-large-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-large-wrapper:hover::after {
+    opacity: 1;
+}
+
+.section-perusahaan h6 {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.section-perusahaan h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.section-perusahaan h2:hover {
+    color: #8B4513;
+}
+
+.section-perusahaan p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Section Why Us - Caramel Gold Theme */
+.section-whyus {
+    background: linear-gradient(180deg, #F5E6D3 0%, #E8D4B8 50%, #DDB892 100%);
+    overflow: hidden;
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+}
+
+.section-whyus .container-sm {
+    padding: 0 15px;
+}
+
+.why-us {
+    color: #8B4513;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.section-whyus h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.section-whyus h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #8B4513;
+    transition: width 0.3s ease;
+}
+
+.section-whyus h2:hover::after {
+    width: 100%;
+}
+
+.section-whyus p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Vision & Mission Cards */
+.vision-mission-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B4513, #D2691E);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.vision-mission-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.vision-mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.25);
+}
+
+.vision-mission-card:hover::before {
+    transform: scaleX(1);
+}
+
+.vision-mission-card:hover::after {
+    opacity: 1;
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.2));
+    border: 2px solid rgba(139, 69, 19, 0.3);
+}
+
+.icon-wrapper i {
+    font-size: 28px;
+    color: #8B4513;
+    transition: all 0.4s ease;
+}
+
+.vision-mission-card:hover .icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+}
+
+.vision-mission-card:hover .icon-wrapper i {
+    transform: scale(1.15);
+}
+
+.vision-mission-card h6 {
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.vision-mission-card p,
+.vision-mission-card li {
+    position: relative;
+    z-index: 1;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.mission-list {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.mission-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #8B4513;
+    font-size: 14px;
+    top: 2px;
+    transition: all 0.3s ease;
+}
+
+.mission-list li:hover {
+    transform: translateX(8px);
+    color: #333;
+}
+
+.mission-list li:hover::before {
+    transform: scale(1.2);
+}
+
+/* Section Filosofi - Coconut Tree Brown Theme */
+.section-filosofi {
+    background: linear-gradient(180deg, #DDB892 0%, #C4A574 50%, #8B5A2B 100%);
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+
+.section-filosofi h6,
+.section-filosofi h2,
+.section-filosofi p,
+.section-filosofi li {
+    color: #FFF8F0;
+}
+
+.section-filosofi h6::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+/* Product Section - Fresh Coconut White Theme */
+.product-area {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F0 50%, #F5E6D3 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.container-product {
+    position: relative;
+}
+
+/* Product Image - Nearly fills the section */
+.product-image {
+    width: 100%;
+    height: 600px !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Mobile: Use contain to show full image */
+@media (max-width: 768px) {
+    .product-image {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.product-image:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.product-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.product-content {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.title-produk {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.title-produk:hover {
+    color: #8B4513;
+    transform: translateX(10px);
+}
+
+.description-product {
+    font-family: "Poppins";
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.description-product:hover {
+    color: #666;
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.product-features li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.product-features li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #8B4513;
+    font-size: 16px;
+    top: 2px;
+    transition: all 0.3s ease;
+}
+
+.product-features li:hover {
+    transform: translateX(8px);
+    color: #333;
+}
+
+.product-features li:hover::before {
+    transform: scale(1.2);
+    color: #D2691E;
+}
+
+/* HS Code Styling */
+.hs-code {
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    color: #8B4513;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.15));
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #8B4513;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.hs-code:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.15), rgba(210, 105, 30, 0.2));
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+}
+
+.hs-code i {
+    color: #D2691E;
+    transition: all 0.3s ease;
+}
+
+.hs-code:hover i {
+    transform: scale(1.1);
+}
+
+.product-button-wrapper {
+    text-align: left;
+}
+
+.main-btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 0;
+    font-size: 16px;
+    padding: 12px 35px;
+    color: white;
+    background-color: #8B4513;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out 0s;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.main-btn:hover::before {
+    left: 100%;
+}
+
+.main-btn:hover {
+    background-color: #6d360f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.4);
+}
+
+.main-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(139, 69, 19, 0.4);
+}
+
+/* Footer - Warm Caramel Theme */
+.footer-all {
+    background: linear-gradient(180deg, #8B5A2B 0%, #6B4226 50%, #4A2C17 100%);
+    padding: 40px 0;
+    width: 100%;
+    position: relative;
+}
+
+.footer-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #D2691E);
+}
+
+.footer-all h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    color: #FFD700;
+}
+
+.footer-all h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.footer-all h4:hover::after {
+    width: 100%;
+}
+
+.footer-all h4:hover {
+    color: #FFA500;
+}
+
+.contact-email {
+    text-align: left;
+    padding-left: 0;
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.contact-email li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    color: #F5E6D3;
+}
+
+.contact-email li:hover {
+    transform: translateX(10px);
+}
+
+.contact-email i {
+    color: #FFD700;
+    margin-right: 10px;
+    min-width: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-email li:hover i {
+    transform: scale(1.2);
+    color: #FFA500;
+}
+
+.contact-email p {
+    margin: 0;
+    color: #F5E6D3;
+}
+
+.info-social-media {
+    text-align: left;
+    color: #FFD700;
+}
+
+.contact-socmed {
+    text-align: left;
+    padding-left: 0;
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.contact-socmed li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-socmed li:hover {
+    transform: translateX(10px);
+}
+
+.contact-socmed a {
+    color: #FFD700;
+    margin-right: 10px;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.contact-socmed li:hover a {
+    transform: scale(1.2);
+}
+
+.contact-socmed i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    color: #FFD700;
+}
+
+.contact-socmed li:hover i {
+    color: #FFA500;
+    transform: rotate(360deg);
+}
+
+.contact-socmed p {
+    margin: 0 0 0 10px;
+    color: #F5E6D3;
+}
+
+.footer-all iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.footer-all iframe:hover {
+    border-color: #FFD700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+
+/* Mobile (max-width: 576px) - Reduced height to hide Gemini logo */
+@media (max-width: 576px) {
+    .product-image {
+        width: 100vw;
+        height: 400px;
+        margin-left: calc(-50vw + 50%);
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Kahiyang brand image wrapper - full width on mobile */
+    .img-brand {
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%);
+        border-radius: 0;
+        padding: 30px 15px;
+    }
+
+    /* Kahiyang brand image - full width on mobile */
+    .brand-kahiyang {
+        width: 100% !important;
+        max-width: none !important;
+        max-height: 300px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Kahiyang Brand Image - Match Filosofi Section Background */
+.brand-kahiyang {
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Mix blend mode to make white background blend with gradient */
+    mix-blend-mode: multiply;
+    /* Smooth transition for effects */
+    transition: all 0.4s ease-in-out;
+    /* Drop shadow for depth - removed because mix-blend-mode affects it */
+}
+
+/* Wrapper with same background as section-filosofi */
+.img-brand {
+    /* Match the filosofi section gradient background */
+    background: linear-gradient(180deg, #DDB892 0%, #C4A574 50%, #8B5A2B 100%);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect - slight scale only, no shadow for seamless blend */
+.brand-kahiyang:hover {
+    transform: scale(1.05);
+}
+
+/* Medium screens */
+@media (min-width: 481px) and (max-width: 576px) {
+    .brand-kahiyang {
+        max-height: 250px;
+    }
+}
+
+/* Small tablets and large phones */
+@media (min-width: 577px) and (max-width: 768px) {
+    .brand-kahiyang {
+        max-height: 280px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 992px) {
+    .brand-kahiyang {
+        max-height: 350px;
+    }
+}
+
+/* Small laptops */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .brand-kahiyang {
+        max-height: 400px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1201px) {
+    .brand-kahiyang {
+        max-height: 500px;
+    }
+}
+
+/* Medium phones and large phones (481px - 576px) */
+@media (min-width: 481px) and (max-width: 576px) {
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .carousel-height-custom {
+        max-height: 300px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px 180px 180px;
+        grid-gap: 10px;
+    }
+
+    .img-large-wrapper {
+        grid-row: span 1;
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Reduced mobile spacing for all sections */
+    .section-perusahaan {
+        padding: 40px 0;
+    }
+
+    .section-whyus {
+        padding: 40px 0;
+    }
+
+    .section-filosofi {
+        padding: 40px 0;
+    }
+
+    .product-area {
+        padding: 40px 0;
+    }
+
+    .section-perusahaan h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-whyus h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Product image - reduced height to hide Gemini logo */
+    .product-image {
+        width: 100vw;
+        height: 300px;
+        margin-left: calc(-50vw + 50%);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-content-wrapper {
+        height: auto;
+    }
+
+    .product-image .image-content {
+        width: 140px;
+        height: 140px;
+    }
+
+    .product-image .image-content .experience {
+        font-size: 16px;
+    }
+
+    .product-image .image-content .experience span {
+        font-size: 32px;
+    }
+
+    .brand-kahiyang {
+        max-height: 250px;
+    }
+
+    /* Vision & Mission Cards Tablet */
+    .vision-mission-card {
+        padding: 28px 22px;
+        margin-bottom: 20px;
+    }
+
+    .icon-wrapper {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Small tablets and large phones (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .carousel-height-custom {
+        max-height: 350px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 160px 160px;
+        grid-gap: 10px;
+    }
+
+    .img-large-wrapper {
+        grid-row: span 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Reduced mobile spacing for all sections */
+    .section-perusahaan {
+        padding: 45px 0;
+    }
+
+    .section-whyus {
+        padding: 45px 0;
+    }
+
+    .section-filosofi {
+        padding: 45px 0;
+    }
+
+    .product-area {
+        padding: 45px 0;
+    }
+
+    .section-perusahaan h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-whyus h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Product image - reduced height to hide Gemini logo */
+    .product-image {
+        width: 100vw;
+        height: 350px;
+        margin-left: calc(-50vw + 50%);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-content-wrapper {
+        height: auto;
+    }
+
+    .brand-kahiyang {
+        max-height: 280px;
+    }
+
+    /* Vision & Mission Cards Tablet */
+    .vision-mission-card {
+        padding: 30px 25px;
+        margin-bottom: 25px;
+    }
+
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar-brand span {
+        font-size: 1.3rem;
+    }
+
+    .logo-custom {
+        height: 55px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-height-custom {
+        max-height: 450px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+    }
+
+    .section-perusahaan,
+    .section-whyus {
+        padding: 60px 0;
+    }
+
+    .section-filosofi {
+        padding: 60px 0;
+    }
+
+    .product-area {
+        padding: 50px 0;
+    }
+
+    .section-perusahaan h2 {
+        font-size: 2rem;
+    }
+
+    .section-whyus h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Product image - reduced height to hide Gemini logo */
+    .product-image {
+        width: 100%;
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-content-wrapper {
+        height: auto;
+    }
+
+    .brand-kahiyang {
+        max-height: 350px;
+    }
+
+    .product-content {
+        padding: 0 30px;
+    }
+
+    .main-btn {
+        margin-left: 30px;
+    }
+}
+
+/* Small laptops (993px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .carousel-item img {
+        height: 450px;
+    }
+
+    .carousel-height-custom {
+        max-height: 500px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+    }
+
+    /* Product image - reduced height to hide Gemini logo */
+    .product-image {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-content-wrapper {
+        height: auto;
+    }
+
+    .brand-kahiyang {
+        max-height: 400px;
+    }
+
+    .section-perusahaan,
+    .section-whyus {
+        padding: 60px 0;
+    }
+
+    .section-filosofi {
+        padding: 60px 0;
+    }
+
+    .product-area {
+        padding: 60px 0;
+    }
+}
+
+/* Large screens (1200px and above) */
+@media (min-width: 1201px) {
+    .carousel-item img {
+        height: 550px;
+    }
+
+    .carousel-height-custom {
+        max-height: 600px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 85%;
+        min-height: 420px;
+        max-height: 550px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-content-wrapper {
+        height: auto;
+    }
+
+    .brand-kahiyang {
+        max-height: 500px;
+    }
+
+    .section-perusahaan,
+    .section-whyus {
+        padding: 80px 0;
+    }
+
+    .section-filosofi {
+        padding: 80px 0;
+    }
+
+    .product-area {
+        padding: 80px 0;
+    }
+}
+
+/* Product section badge visibility - Mobile First Approach */
+
+/* Mobile (max-width: 768px) - Show mobile badge, hide desktop badge */
+@media (max-width: 768px) {
+    .experience-badge-mobile {
+        display: flex !important;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .experience-badge-desktop {
+        display: none !important;
+    }
+}
+
+/* Desktop (min-width: 769px) - Show desktop badge, hide mobile badge */
+@media (min-width: 769px) {
+    .experience-badge-mobile {
+        display: none !important;
+    }
+
+    .experience-badge-desktop {
+        display: flex !important;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-area {
+        position: relative;
+    }
+}
+
+/* Tablet landscape and small desktop (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .experience-badge-desktop .experience {
+        width: 130px;
+        height: 130px;
+        font-size: 16px;
+    }
+
+    .experience-badge-desktop .experience span {
+        font-size: 32px;
+    }
+
+    .experience-badge-desktop {
+        top: 25px;
+    }
+}
+
+/* Large desktop (1200px and above) */
+@media (min-width: 1201px) {
+    .experience-badge-desktop .experience {
+        width: 160px;
+        height: 160px;
+        font-size: 20px;
+    }
+
+    .experience-badge-desktop .experience span {
+        font-size: 42px;
+    }
+
+    .experience-badge-desktop {
+        top: 40px;
+    }
+}
+
+/* Mobile Modal - 30vh height and centered */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90% !important;
+        margin: 5vh auto !important;
+    }
+
+    .modal-content {
+        max-height: 30vh !important;
+        border-radius: 16px;
+    }
+
+    .modal-header {
+        padding: 12px 15px;
+        flex-shrink: 0;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .modal-body {
+        padding: 15px;
+        overflow-y: auto;
+        max-height: calc(30vh - 60px);
+    }
+
+    .modal-footer {
+        padding: 10px 15px;
+        flex-shrink: 0;
+    }
+
+    .feature-list>li {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 12px;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        margin-right: 12px;
+    }
+
+    .feature-icon i {
+        font-size: 16px;
+    }
+
+    .feature-content strong {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .feature-content p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-close {
+        padding: 8px;
+        background-size: 12px;
+    }
+
+    .modal-footer .main-btn {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+}
+
+/* ========================================
+   ARTISTIC BACKGROUND ELEMENTS
+   Coconut Sugar Themed Decorations
+   ======================================== */
+
+/* Base styles for all artistic backgrounds */
+.artistic-bg-section,
+.artistic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Coconut Leaf Styles */
+.bg-leaf {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #228B22 0%, #32CD32 50%, #228B22 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    opacity: 0.15;
+    animation: floatLeaf 8s ease-in-out infinite;
+}
+
+.bg-leaf::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateY(-50%);
+}
+
+.bg-leaf.leaf-a1 {
+    top: 5%;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 0s;
+    transform: rotate(-15deg);
+}
+
+.bg-leaf.leaf-a2 {
+    top: 60%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 2s;
+    transform: rotate(25deg);
+}
+
+.bg-leaf.leaf-w1 {
+    top: 10%;
+    right: 15%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 1s;
+    transform: rotate(-30deg);
+}
+
+.bg-leaf.leaf-w2 {
+    bottom: 15%;
+    left: 10%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 3s;
+    transform: rotate(45deg);
+}
+
+.bg-leaf.leaf-f1 {
+    top: 5%;
+    left: 3%;
+    width: 160px;
+    height: 160px;
+    animation-delay: 0.5s;
+    transform: rotate(-20deg);
+}
+
+.bg-leaf.leaf-f2 {
+    bottom: 20%;
+    right: 5%;
+    width: 130px;
+    height: 130px;
+    animation-delay: 2.5s;
+    transform: rotate(35deg);
+}
+
+.bg-leaf.leaf-1 {
+    top: -20px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+    animation-delay: 0s;
+    transform: rotate(-25deg);
+    opacity: 0.12;
+}
+
+.bg-leaf.leaf-2 {
+    top: 40%;
+    right: -50px;
+    width: 180px;
+    height: 180px;
+    animation-delay: 1.5s;
+    transform: rotate(30deg);
+    opacity: 0.1;
+}
+
+/* Floating Leaf Animation */
+@keyframes floatLeaf {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(var(--rotation, 0deg));
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-3deg);
+    }
+
+    75% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+/* Sugar Crystal Styles */
+.bg-crystal,
+.sugar-crystal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    opacity: 0.3;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.bg-crystal.crystal-a1 {
+    top: 20%;
+    right: 20%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+}
+
+.bg-crystal.crystal-a2 {
+    bottom: 25%;
+    left: 15%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 1s;
+}
+
+.sugar-crystal.crystal-1 {
+    top: 15%;
+    left: 25%;
+    width: 28px;
+    height: 28px;
+    animation-delay: 0.2s;
+}
+
+.sugar-crystal.crystal-2 {
+    top: 60%;
+    right: 10%;
+    width: 22px;
+    height: 22px;
+    animation-delay: 0.8s;
+}
+
+.sugar-crystal.crystal-3 {
+    bottom: 30%;
+    left: 40%;
+    width: 18px;
+    height: 18px;
+    animation-delay: 1.5s;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1);
+    }
+
+    25% {
+        opacity: 0.5;
+        transform: scale(1.1) rotate(90deg);
+        filter: brightness(1.3);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.95) rotate(180deg);
+        filter: brightness(1.1);
+    }
+
+    75% {
+        opacity: 0.6;
+        transform: scale(1.05) rotate(270deg);
+        filter: brightness(1.4);
+    }
+}
+
+/* Diamond Sparkle Styles */
+.bg-diamond {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #E5E4E2 0%, #C0C0C0 50%, #E5E4E2 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    opacity: 0.4;
+    animation: diamondSparkle 4s ease-in-out infinite;
+}
+
+.bg-diamond.diamond-w1 {
+    top: 30%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.bg-diamond.diamond-w2 {
+    bottom: 40%;
+    right: 25%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+}
+
+/* Diamond Sparkle Animation */
+@keyframes diamondSparkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.3);
+    }
+}
+
+/* Sunburst Effects */
+.bg-sunburst {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: conic-gradient(from 0deg,
+            rgba(255, 215, 0, 0.1) 0deg,
+            rgba(255, 165, 0, 0.05) 30deg,
+            rgba(255, 215, 0, 0.1) 60deg,
+            rgba(255, 140, 0, 0.05) 90deg,
+            rgba(255, 215, 0, 0.1) 120deg,
+            rgba(255, 165, 0, 0.05) 150deg,
+            rgba(255, 215, 0, 0.1) 180deg,
+            rgba(255, 140, 0, 0.05) 210deg,
+            rgba(255, 215, 0, 0.1) 240deg,
+            rgba(255, 165, 0, 0.05) 270deg,
+            rgba(255, 215, 0, 0.1) 300deg,
+            rgba(255, 140, 0, 0.05) 330deg,
+            rgba(255, 215, 0, 0.1) 360deg);
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: rotateSunburst 20s linear infinite;
+}
+
+.bg-sunburst.sunburst-f1 {
+    top: -100px;
+    right: -100px;
+}
+
+/* Sunburst Rotation Animation */
+@keyframes rotateSunburst {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Golden Orb Styles */
+.bg-orb {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(255, 215, 0, 0.4) 0%,
+            rgba(255, 165, 0, 0.2) 50%,
+            rgba(139, 69, 19, 0.1) 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulseOrb 5s ease-in-out infinite;
+}
+
+.bg-orb.orb-f1 {
+    bottom: 10%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 1s;
+}
+
+/* Orb Pulse Animation */
+@keyframes pulseOrb {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+/* Caramel Drip Effects */
+.caramel-drip {
+    position: absolute;
+    background: linear-gradient(180deg,
+            rgba(139, 69, 19, 0.3) 0%,
+            rgba(205, 133, 63, 0.5) 50%,
+            rgba(210, 105, 30, 0.7) 100%);
+    border-radius: 0 0 50% 50%;
+    opacity: 0.4;
+    animation: drip 6s ease-in-out infinite;
+}
+
+.caramel-drip.drip-1 {
+    top: -10px;
+    left: 10%;
+    width: 40px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.caramel-drip.drip-2 {
+    top: -15px;
+    right: 20%;
+    width: 30px;
+    height: 100px;
+    animation-delay: 2s;
+}
+
+/* Caramel Drip Animation */
+@keyframes drip {
+
+    0%,
+    100% {
+        height: 80px;
+        opacity: 0.4;
+    }
+
+    50% {
+        height: 100px;
+        opacity: 0.6;
+    }
+}
+
+/* Particle Effects - Small Sugar Grains */
+.bg-particle,
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #FFD700 0%, transparent 100%);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: particleFloat 7s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+
+    25% {
+        transform: translateY(-30px) translateX(20px);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-15px) translateX(-10px);
+        opacity: 0.4;
+    }
+
+    75% {
+        transform: translateY(-40px) translateX(15px);
+        opacity: 0.5;
+    }
+}
+
+/* Warm Glow Effects */
+.warm-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle,
+            rgba(255, 215, 0, 0.15) 0%,
+            rgba(255, 165, 0, 0.08) 50%,
+            transparent 100%);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: warmPulse 4s ease-in-out infinite;
+}
+
+@keyframes warmPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Golden Thread/Line Decorations */
+.golden-thread {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    animation: threadShimmer 3s ease-in-out infinite;
+}
+
+@keyframes threadShimmer {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        width: 100px;
+    }
+
+    50% {
+        opacity: 0.6;
+        width: 150px;
+    }
+}
+
+/* Enhanced Section Styles with Artistic Backgrounds */
+
+/* About Section Enhanced */
+.section-perusahaan {
+    background: linear-gradient(180deg, #FFF8F0 0%, #F5E6D3 100%);
+}
+
+.section-perusahaan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(255, 165, 0, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Why Us Section Enhanced */
+.section-whyus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(205, 133, 63, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* Filosofi Section Enhanced */
+.section-filosofi {
+    background: linear-gradient(180deg, #DDB892 0%, #C4A574 50%, #8B5A2B 100%);
+}
+
+.section-filosofi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 30% 70%, rgba(255, 165, 0, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Product Section Enhanced */
+.container-product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(255, 215, 0, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 85% 50%, rgba(139, 69, 19, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* Responsive Adjustments for Artistic Elements */
+@media (max-width: 768px) {
+    .bg-leaf {
+        width: 80px;
+        height: 80px;
+    }
+
+    .bg-crystal,
+    .sugar-crystal {
+        width: 18px;
+        height: 18px;
+    }
+
+    .bg-sunburst {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bg-orb {
+        width: 50px;
+        height: 50px;
+    }
+
+    .caramel-drip {
+        width: 20px;
+        height: 50px;
+    }
+
+    .artistic-bg-section,
+    .artistic-bg {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-leaf {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bg-crystal,
+    .sugar-crystal {
+        width: 12px;
+        height: 12px;
+    }
+
+    .bg-sunburst {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bg-orb {
+        width: 35px;
+        height: 35px;
+    }
+
+    .caramel-drip {
+        width: 15px;
+        height: 35px;
+    }
+}
+
+/* Smooth Scroll Enhancement */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Loading Animation for Page */
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageLoad 0.5s ease-out;
+}
+
+/* Enhanced Card Styles */
+.vision-mission-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-mission-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.vision-mission-card:hover::after {
+    opacity: 1;
+}
+
+/* Icon Animation Enhancement */
+.icon-wrapper {
+    transition: all 0.4s ease;
+}
+
+.vision-mission-card:hover .icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+}
+
+.icon-wrapper i {
+    transition: all 0.4s ease;
+}
+
+.vision-mission-card:hover .icon-wrapper i {
+    transform: scale(1.15);
+}
+
+/* Image Hover Effects */
+.image-grid img {
+    transition: all 0.4s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image Enhanced */
+.product-image {
+    transition: all 0.4s ease;
+}
+
+.product-image:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Button Hover Effects */
+.main-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.main-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Nav Link Hover Enhancement */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::before {
+    width: 80%;
+}
+
+/* Footer Enhancement */
+.footer-all {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-all::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #D2691E, #FFD700);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Contact Info Hover Effect */
+.contact-email li,
+.contact-socmed li {
+    transition: all 0.3s ease;
+}
+
+.contact-email li:hover,
+.contact-socmed li:hover {
+    transform: translateX(10px);
+}
+
+/* Social Media Icon Rotation */
+.contact-socmed li:hover i {
+    transform: rotate(360deg);
+}
+
+/* Map Frame Enhancement */
+.footer-all iframe {
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.footer-all iframe:hover {
+    border-color: #FFD700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand Logo Animation */
+.logo-custom {
+    transition: all 0.3s ease;
+}
+
+.logo-custom:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Modal Enhancement */
+.modal-content {
+    background: linear-gradient(180deg, #FFF8F0 0%, #F5E6D3 100%);
+    border: none;
+    border-radius: 16px;
+}
+
+.modal-header {
+    border-bottom: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.modal-footer {
+    border-top: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Feature List Enhancement */
+.feature-list li {
+    transition: all 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.feature-list li:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-list li:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Parallax Effect Enhancement */
+@media (min-width: 769px) {
+    .product-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+/* Additional Decorative Elements */
+
+/* Corner Accents */
+.corner-accent {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(255, 215, 0, 0.2);
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.corner-accent.top-left {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-accent.top-right {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-accent.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-accent.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Dotted Pattern Background */
+.dotted-pattern {
+    background-image: radial-gradient(rgba(139, 69, 19, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Line Decoration */
+.line-decoration {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.line-decoration::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8B4513, #FFD700, #8B4513, transparent);
+    border-radius: 2px;
+}
+
+/* Section Title Enhancement */
+h6.text-uppercase.text-brown.fw-bold {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+h6.text-uppercase.text-brown.fw-bold::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 2px;
+}
+
+/* Card Content Enhancement */
+.vision-mission-card h6,
+.vision-mission-card p,
+.mission-list li {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure content stays above decorative elements */
+.section-perusahaan .container-sm,
+.section-whyus .container-sm,
+.section-filosofi .container-sm,
+.product-area {
+    position: relative;
+    z-index: 1;
+}
