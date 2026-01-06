@@ -524,7 +524,7 @@ body {
 /* Product Section - Fresh Coconut White Theme */
 .product-area {
     background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F0 50%, #F5E6D3 100%);
-    padding: 60px 0;
+    padding: 60px 0 20px;
     position: relative;
     overflow: hidden;
     margin-top: 40px;
@@ -632,6 +632,50 @@ body {
 .product-features li:hover::before {
     transform: scale(1.2);
     color: #D2691E;
+}
+
+/* Product Highlights */
+.product-highlights {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px dashed rgba(139, 69, 19, 0.2);
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
+}
+
+.highlight-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highlight-list li {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.2);
+}
+
+.highlight-list li::before {
+    content: '✓';
+    margin-right: 8px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.highlight-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+    background: linear-gradient(135deg, #6B4226 0%, #8B4513 100%);
 }
 
 /* HS Code Styling */
@@ -797,6 +841,139 @@ body {
     color: #F5E6D3;
 }
 
+/* WhatsApp Link Styling */
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: #25D366;
+}
+
+.whatsapp-link i {
+    color: #25D366;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover i {
+    transform: scale(1.2);
+}
+
+.whatsapp-link p {
+    margin: 0;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover p {
+    color: #25D366;
+}
+
+/* Email Link Styling */
+.email-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    color: #FFD700;
+}
+
+.email-link i {
+    color: #FFD700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover i {
+    transform: scale(1.2);
+    color: #FFA500;
+}
+
+.email-link p {
+    margin: 0;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover p {
+    color: #FFD700;
+}
+
+/* Instagram Link Styling */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover {
+    color: #E1306C;
+}
+
+.instagram-link i {
+    color: #E1306C;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover i {
+    transform: scale(1.2);
+}
+
+.instagram-link p {
+    margin: 0;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover p {
+    color: #E1306C;
+}
+
+/* Facebook Link Styling */
+.facebook-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.facebook-link:hover {
+    color: #1877F2;
+}
+
+.facebook-link i {
+    color: #1877F2;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.facebook-link:hover i {
+    transform: scale(1.2);
+}
+
+.facebook-link p {
+    margin: 0;
+    color: #F5E6D3;
+    transition: all 0.3s ease;
+}
+
+.facebook-link:hover p {
+    color: #1877F2;
+}
+
 .info-social-media {
     text-align: left;
     color: #FFD700;
@@ -821,7 +998,6 @@ body {
 }
 
 .contact-socmed a {
-    color: #FFD700;
     margin-right: 10px;
     min-width: 20px;
     display: flex;
@@ -836,11 +1012,9 @@ body {
 .contact-socmed i {
     font-size: 1.2rem;
     transition: all 0.3s ease;
-    color: #FFD700;
 }
 
 .contact-socmed li:hover i {
-    color: #FFA500;
     transform: rotate(360deg);
 }
 
@@ -2391,4 +2565,543 @@ h6.text-uppercase.text-brown.fw-bold::before {
 .product-area {
     position: relative;
     z-index: 1;
+}
+
+/* ==========================================
+   Product Packaging Section Styles - Inline Layout
+   ========================================== */
+
+.product-packaging-section {
+    background: linear-gradient(180deg, #F5E6D3 0%, #FFFFFF 50%, #FFF8F0 100%);
+    padding: 60px 0 80px;
+    position: relative;
+}
+
+.product-packaging-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8B4513, #D2691E, #FFD700, #D2691E, #8B4513);
+}
+
+/* Product Spec Row */
+.product-spec-row {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.12);
+    border: 2px solid rgba(139, 69, 19, 0.08);
+    transition: all 0.4s ease;
+}
+
+.product-spec-row:last-child {
+    margin-bottom: 0;
+}
+
+.product-spec-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(139, 69, 19, 0.18);
+    border-color: rgba(210, 105, 30, 0.2);
+}
+
+/* Product Spec Image */
+.product-spec-image {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #F5E6D3 0%, #E8D4B8 100%);
+}
+
+.product-spec-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-spec-row:hover .product-spec-image img {
+    transform: scale(1.05);
+}
+
+/* Product Spec Content */
+.product-spec-content {
+    padding: 10px 0;
+}
+
+.product-spec-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4A2C17;
+    margin-bottom: 5px;
+}
+
+.product-spec-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #8B7355;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.15);
+}
+
+/* Spec Groups */
+.spec-group {
+    margin-bottom: 25px;
+}
+
+.spec-group:last-child {
+    margin-bottom: 0;
+}
+
+.spec-group-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8B4513;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.spec-group-title i {
+    color: #D2691E;
+    font-size: 1.1rem;
+}
+
+/* Inline Spec List */
+.spec-inline-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.spec-inline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    border-radius: 10px;
+    border-left: 3px solid #D2691E;
+    transition: all 0.3s ease;
+}
+
+.spec-inline-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+}
+
+.spec-inline-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.spec-inline-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #4A2C17;
+    background: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.08);
+}
+
+/* Responsive for Inline Specs */
+@media (max-width: 992px) {
+    .product-spec-image {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .product-spec-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-spec-row {
+        padding: 20px;
+    }
+
+    .product-spec-image {
+        height: 280px;
+    }
+
+    .spec-inline-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-spec-title {
+        font-size: 1.4rem;
+    }
+
+    .product-spec-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-packaging-section {
+        padding: 40px 15px 60px;
+    }
+
+    .product-spec-row {
+        padding: 15px;
+    }
+
+    .product-spec-image {
+        height: 250px;
+    }
+
+    .product-spec-title {
+        font-size: 1.3rem;
+    }
+
+    .spec-inline-item {
+        padding: 10px 12px;
+    }
+
+    .spec-inline-label {
+        font-size: 0.85rem;
+    }
+
+    .spec-inline-value {
+        font-size: 0.85rem;
+        padding: 3px 10px;
+    }
+}
+
+/* Product Package Cards */
+.product-package-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(139, 69, 19, 0.1);
+}
+
+.product-package-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(139, 69, 19, 0.25);
+    border-color: rgba(210, 105, 30, 0.3);
+}
+
+.product-package-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #F5E6D3 0%, #E8D4B8 100%);
+}
+
+.product-package-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(139, 69, 19, 0.1) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.product-package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-package-card:hover .product-package-image img {
+    transform: scale(1.08);
+}
+
+.product-package-info {
+    padding: 25px 30px 30px;
+    text-align: center;
+    background: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-package-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4A2C17;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.product-package-card:hover .product-package-title {
+    color: #8B4513;
+}
+
+.product-package-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #8B7355;
+    margin-bottom: 20px;
+}
+
+/* Specification Button */
+.spec-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.3);
+}
+
+.spec-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.spec-btn:hover::before {
+    left: 100%;
+}
+
+.spec-btn:hover {
+    background: linear-gradient(135deg, #6B4226 0%, #8B4513 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.4);
+}
+
+.spec-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+}
+
+.spec-btn i {
+    transition: transform 0.3s ease;
+}
+
+.spec-btn:hover i {
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   Specification Modal Styles
+   ========================================== */
+
+.spec-modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+.spec-modal-header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #6B4226 100%);
+    color: white;
+    padding: 20px 25px;
+    border-bottom: none;
+}
+
+.spec-modal-header .modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.spec-modal-header .modal-title i {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+.spec-modal-body {
+    padding: 30px;
+    background: linear-gradient(180deg, #FFF8F0 0%, #FFFFFF 100%);
+}
+
+.spec-product-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #8B4513;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.spec-product-title i {
+    color: #D2691E;
+    font-size: 1.2rem;
+}
+
+.spec-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.spec-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 18px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(139, 69, 19, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #D2691E;
+}
+
+.spec-list li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.15);
+    border-left-color: #8B4513;
+}
+
+.spec-list li:last-child {
+    margin-bottom: 0;
+}
+
+.spec-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.spec-label i {
+    color: #8B4513;
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.spec-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4A2C17;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.15));
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.spec-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D2691E, transparent);
+    margin: 25px 0;
+    opacity: 0.5;
+}
+
+.spec-modal-footer {
+    background: #F5E6D3;
+    border-top: none;
+    padding: 18px 25px;
+    justify-content: center;
+}
+
+/* ==========================================
+   Responsive Styles for Product Packaging
+   ========================================== */
+
+@media (max-width: 768px) {
+    .product-packaging-section {
+        padding: 40px 15px 60px;
+    }
+
+    .product-package-image {
+        height: 280px;
+    }
+
+    .product-package-info {
+        padding: 20px 25px 25px;
+    }
+
+    .product-package-title {
+        font-size: 1.3rem;
+    }
+
+    .spec-btn {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+
+    .spec-modal-body {
+        padding: 20px;
+    }
+
+    .spec-list li {
+        padding: 12px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .spec-value {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-package-image {
+        height: 250px;
+    }
+
+    .product-package-title {
+        font-size: 1.2rem;
+    }
+
+    .product-package-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .spec-product-title {
+        font-size: 1rem;
+    }
+
+    .spec-label {
+        font-size: 0.9rem;
+    }
+
+    .spec-value {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+    }
 }
